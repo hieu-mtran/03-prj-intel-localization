@@ -177,6 +177,26 @@ section::-webkit-scrollbar {
   display: none;
 }
 
+/* Newsletter section full-width background */
+.newsletter-bg {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  background: #f5f7fa;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+@media (max-width: 600px) {
+  .newsletter-bg {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+}
+
 /* Responsive: show 1.5 cards on mobile, 2 on small tablets */
 @media (max-width: 1300px) {
   section {

@@ -4,17 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Intel: Sustainability Through the Ages</title>
-  <link rel="stylesheet" href="style.css" />
+  <!-- Add this line inside your <head> tag, above your own style.css -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">  <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 <body>
-
   <!-- Header / Hero Section -->
   <header>
     <div>
-      <!-- Ask Copilot to teach you about `.svg` 🙂 -->
       <img src="img/intel-header-logo.svg" alt="Intel Logo" />
       <!-- Main Heading -->
       <h1>
@@ -29,6 +29,10 @@
       </p>
     </div>
   </header>
+
+  <div style="text-align: center;">
+    <div id="google_translate_element"></div>
+  </div>
 
   <!-- Timeline Cards Section -->
   <section>
@@ -143,6 +147,132 @@
   </section>
   <p>Scroll to view timeline | Hover over cards to learn more!</p>
 
+  <!-- 3-Column Content Section (Bootstrap) -->
+  <div class="container my-5">
+    <div class="row justify-content-center">
+      <!-- Column 1 -->
+      <div class="col-12 col-md-4 mb-4">
+        <!-- Heading for column 1 -->
+        <h2> <i class="bi bi-rocket"></i>  RISE Strategy</h2>
+        <!-- Description for column 1 -->
+        <p>
+          Under its RISE (Responsible, Inclusive, Sustainable, Enabling) strategy, 
+          Intel sets ambitious 2030 goals, including driving industry-wide 
+          progress on climate action, water stewardship, and waste reduction.
+        </p>
+        <!-- Learn More Button -->
+        <a href="#" class="btn btn-primary">Learn More</a>
+      </div>
+      <!-- Column 2 -->
+      <div class="col-12 col-md-4 mb-4">
+        <h2> <i class="bi bi-crosshair"></i>  Commitment</h2>
+        <p>
+          In 2022, Intel pledged to achieve net-zero greenhouse gas emissions 
+          (Scope 1 and 2) by 2040. This commitment builds on decades of 
+          environmental initiatives and partnerships across the semiconductor 
+          industry.
+        </p>
+        <a href="#" class="btn btn-primary">Learn More</a>
+      </div>
+      <!-- Column 3 -->
+      <div class="col-12 col-md-4 mb-4">
+        <h2> <i class="bi bi-recycle"></i>  Water &amp; Waste</h2>
+        <p>
+          Intel conserves billions of gallons of water annually and 
+          collaborates with local communities to restore watersheds.
+          Intel also upcycles and recycles materials to reduce waste and 
+          advance a circular economy.
+        </p>
+        <a href="#" class="btn btn-primary">Learn More </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Newsletter Subscription Form (Bootstrap) -->
+  <!-- This section extends full width with a light background color -->
+  <div class="newsletter-bg">
+    <div class="container">
+      <h2 class="mb-4 text-center">
+        <i class="bi bi-envelope-fill"></i> Subscribe to Our Sustainability Newsletter
+      </h2>
+      <!-- Simple horizontal subscription form -->
+      <form>
+        <div class="row justify-content-center align-items-end g-2">
+          <div class="col-12 col-md-4">
+            <label for="subscriberEmail" class="form-label visually-hidden">Email address</label>
+            <input type="email" class="form-control" id="subscriberEmail" placeholder="Enter your email" alt="Email">
+          </div>
+          <div class="col-12 col-md-1">
+            <!-- Submit button with an id for easy access -->
+            <button type="submit" class="btn btn-primary" id="subscribeBtn">Subscribe</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer class="bg-light text-center text-lg-start mt-5 py-3 border-top">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+      <!-- Copyright Notice -->
+      <span class="text-muted mb-2 mb-md-0">&copy; 2025 Intel Corporation. All rights reserved.</span>
+      <!-- Placeholder Navigation Links -->
+      <nav>
+        <a href="#" class="text-muted mx-2">Privacy Policy</a>
+        <a href="#" class="text-muted mx-2">Terms of Use</a>
+        <!-- Contact Modal Trigger Link in Footer -->
+        <a href="#" data-bs-toggle="modal" data-bs-target="#contactModal" class="text-muted mx-2">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Contact Modal Code (place before the closing </body> tag) -->
+  <!-- This is the popup that appears when you click "Contact" -->
+  <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h5 class="modal-title" id="contactModalLabel">Contact Us</h5>
+          <!-- Close button -->
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <!-- Modal Body -->
+        <div class="modal-body">
+          <!-- Simple contact form -->
+          <form>
+            <div class="mb-3">
+              <label for="contactName" class="form-label">Name</label>
+              <input type="text" class="form-control" id="contactName" placeholder="Enter your name">
+            </div>
+            <div class="mb-3">
+              <label for="contactEmail" class="form-label">Email</label>
+              <input type="email" class="form-control" id="contactEmail" placeholder="Enter your email">
+            </div>
+            <div class="mb-3">
+              <label for="contactMessage" class="form-label">Message</label>
+              <textarea class="form-control" id="contactMessage" rows="3" placeholder="Type your message"></textarea>
+            </div>
+            <!-- Submit button (does not send data, just for practice) -->
+            <button type="submit" class="btn btn-primary">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    // This function creates the Google Translate dropdown
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+        {pageLanguage: 'en'}, // The original language of your page
+        'google_translate_element' // The id of the element to display the widget
+      );
+    }
+  </script>
+  <!-- This script loads the Google Translate library -->
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
   <script>
     // Auto-activate one card at a time on small screens as user scrolls
     function isSmallScreen() {
@@ -183,6 +313,51 @@
 
     // Initial activation
     setActiveCardOnScroll();
+  </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+  <!-- Beginner-friendly JavaScript to detect language change and apply RTL if needed -->
+  <script>
+  // This script checks the page's language and sets RTL direction for Arabic, Hebrew, Persian, or Urdu
+
+  function setDirectionByLang() {
+    // Get the current language from the <html> tag
+    var lang = document.documentElement.lang || '';
+    // List of RTL language codes
+    var rtlLangs = ['ar', 'he', 'fa', 'ur'];
+    // If the language is RTL, set dir="rtl", otherwise set dir="ltr"
+    if (rtlLangs.includes(lang.substring(0, 2).toLowerCase())) {
+      document.documentElement.setAttribute('dir', 'rtl');
+    } else {
+      document.documentElement.setAttribute('dir', 'ltr');
+    }
+  }
+
+  // Run when the page loads
+  setDirectionByLang();
+
+  // Some translation tools (like Google Translate) change the lang attribute after the page loads.
+  // This checks for changes every second.
+  setInterval(setDirectionByLang, 1000);
+  </script>
+
+  <!-- Add this script at the end of your HTML, before </body> -->
+  <script>
+  // Wait for the page to load
+  document.addEventListener('DOMContentLoaded', function() {
+    // Get the subscribe button
+    var btn = document.getElementById('subscribeBtn');
+    // Listen for clicks on the button
+    btn.addEventListener('click', function(event) {
+      // Prevent the form from actually submitting (for demo purposes)
+      event.preventDefault();
+      // Change the button text
+      btn.textContent = 'Subscribed!';
+      // Make the button gray and disabled
+      btn.classList.remove('btn-primary');
+      btn.classList.add('btn-secondary');
+      btn.disabled = true;
+    });
+  });
   </script>
 </body>
 </html>
